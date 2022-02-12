@@ -1,9 +1,6 @@
 <template>
 <div id="app">
-  <button @click="festmeny">Festmények</button>
-  <button @click="szobrok">Szobrok</button>
-  <Painting v-if="festmeny_on"/>
-  <Statue v-if="!festmeny_on"/>
+  <Statue/>
 
 </div>
   
@@ -26,18 +23,8 @@ export default {
     }
   },
   methods: {
-    festmeny(){
-      if(this.festmeny_on!=true) {
-        this.festmeny_on = true;
-      }
-    },
-    szobrok(){
-      if(this.festmeny_on==true) {
-        this.festmeny_on = false;
-      }
     }
     }
-}
 </script>
 <style>
 #app {
